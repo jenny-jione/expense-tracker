@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.months button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
