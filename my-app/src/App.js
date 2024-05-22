@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CSVReader from 'react-csv-reader';
 import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
 import './App.css';
@@ -31,6 +31,24 @@ const App = () => {
   const [data, setData] = useState([]);
   const [months, setMonths] = useState([]);
   const [selectedMonth, setSelectedMonth] = useState('');
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      const pressedKey = event.key;
+      if (pressedKey >= '1' && pressedKey <= '9') {
+        const index = parseInt(pressedKey) - 1;
+        if (index < months.length) {
+          handleMonthClick(months[index]);
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [months]);
 
   const handleFileLoad = (data) => {
     const categories = {};
