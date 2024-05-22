@@ -27,6 +27,21 @@ const CATEGORY_COLORS = {
   Other: '#AF19FF',
 };
 
+const MONTH_NAME = {
+  1: 'January',
+  2: 'February',
+  3: 'March',
+  4: 'April',
+  5: 'May',
+  6: 'June',
+  7: 'July',
+  8: 'August',
+  9: 'September',
+  10: 'October',
+  11: 'November',
+  12: 'December',
+}
+
 const App = () => {
   const [data, setData] = useState([]);
   const [months, setMonths] = useState([]);
@@ -102,7 +117,7 @@ const App = () => {
       </div>
       {selectedMonth && (
         <div className="chart-container">
-          <h2>Expenses for {selectedMonth}</h2>
+          <h2>{MONTH_NAME[selectedMonth]}</h2>
           <PieChart width={500} height={500} margin={{ top: 0, right: 0, bottom: 0, left: 0 }}>
             <Pie
               data={chartData}
