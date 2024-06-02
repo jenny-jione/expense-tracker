@@ -282,7 +282,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Monthly Budget Tracker</h1>
+      <h1>Monthly Expense Tracker</h1>
       {data.length > 0 && <Bar data={getChartData()} options={options} />}
     </div>
   );
