@@ -27,7 +27,7 @@ with open('./expense2024.csv', 'r') as f, open('./my-app/public/data.csv', 'w', 
         category = row[-2]
         amount = int(row[-1])
 
-        month = int(date.split('. ')[1])
+        month = int(date.split('.')[1])
         category = category.replace('의류/잡화','의류잡화')
         
         data.setdefault(month, {})
