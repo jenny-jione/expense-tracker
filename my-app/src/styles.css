@@ -1,0 +1,38 @@
+/* styles.css */
+.chart-container {
+    width: 100%;
+    max-width: 500px; /* 원하는 최대 너비로 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    margin-bottom: 20px;
+  }
+  
+  .button-group button {
+    margin: 0 5px; /* 버튼 사이의 여백 설정 */
+    padding: 10px 15px;
+    background-color: #d7dad3;
+    color: rgb(47, 47, 47);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button-group button:hover {
+    background-color: #94b1d0;
+  }
+
+  .button-group button.selected {
+    background-color: #568fcb;
+  }
+
+  .current-month {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  
