@@ -68,6 +68,9 @@ const BarChartPage = () => {
             return label;
           }
         }
+      },
+      datalabels: {
+        display: false
       }
     }
   };
