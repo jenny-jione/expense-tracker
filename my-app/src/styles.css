@@ -35,4 +35,12 @@
     margin-bottom: 20px;
   }
   
+  @font-face {
+    font-family: 'GowunDodum-Regular';
+    src: url('./fonts/GowunDodum-Regular.ttf') format('truetype');
+  }
+  
+  body {
+    font-family: 'GowunDodum-Regular', Arial, sans-serif;
+  }
   
