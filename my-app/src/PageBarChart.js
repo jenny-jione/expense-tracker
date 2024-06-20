@@ -77,7 +77,6 @@ const BarChartPage = () => {
 
   return (
     <div>
-      <h1>Monthly Expense Tracker</h1>
       {error && <div className="error-message">{error}</div>}
       {data.length > 0 ? <Bar data={chartData} options={options} /> : <p>Loading data...</p>}
     </div>

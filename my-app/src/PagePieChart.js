@@ -106,9 +106,6 @@ const PieChartPage = () => {
 
   return (
     <div>
-      <h1 style={{ textAlign: 'center' }}>
-        Monthly Expense Pie Chart
-      </h1>
       {error && <div className="error-message">{error}</div>}
       {data.length > 0 ? (
         <div>
@@ -127,7 +124,7 @@ const PieChartPage = () => {
             <Pie data={chartData} options={options}/>
           </div>
           <div style={{ textAlign: 'center', marginTop: '20px' }}>
-            <h2 >Total Expense: {totalExpense}원</h2>
+            <h2>Total Expense: {totalExpense}원</h2>
           </div>
         </div>
       ) : (
