@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import BarChartPage from './PageBarChart';
 import PieChartPage from './PagePieChart';
+import RankingTable from './PageRank';
 
 const App = () => {
   return (
@@ -17,11 +18,16 @@ const App = () => {
           <NavLink to="/pie" style={buttonStyle} activeStyle={activeButtonStyle}>
             Pie Chart
           </NavLink>
+          <NavLink to="/rank" style={buttonStyle} activeStyle={activeButtonStyle}>
+            Rank
+          </NavLink>
+          
         </nav>
 
         <Routes>
           <Route path="/bar" element={<BarChartPage />} />
           <Route path="/pie" element={<PieChartPage />} />
+          <Route path="/rank" element={<RankingTable />} />
         </Routes>
       </div>
     </Router>
