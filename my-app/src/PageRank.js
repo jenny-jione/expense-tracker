@@ -52,12 +52,15 @@ const RankingTable = () => {
             <tr key={rank}>
               <td>{rank + 1}위</td>
               {months.map(month => {
-                const category = monthlyRankings[month][rank]?.category;
+                const entry = monthlyRankings[month][rank];
+                const category = entry ? entry.category : null;
+                const amount = entry ? entry.amount : null;
                 // const backgroundColor = category ? categoryColors[category] : '#ffffff';
                 const backgroundColor = '#ffffff';
                 return (
                   <td key={month} style={{ backgroundColor }}>
-                    {category || '-'}
+                    {/* {category ? `${category} (${amount})` : '-'} */}
+                    {category ? `${category} (${amount})` : '-'}
                   </td>
                 );
               })}
