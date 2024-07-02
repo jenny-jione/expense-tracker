@@ -16,8 +16,8 @@ const PieChartPage = () => {
 
   useEffect(() => {
     if (data.length > 0) {
-      setSelectedMonth(data[0].month); // 첫 번째 월을 기본값으로 설정
-      setDisplayedMonth(data[0].month); // 첫 번째 월을 화면에 표시
+      setSelectedMonth(data[data.length-1].month); // 현재 월을 기본값으로 설정
+      setDisplayedMonth(data[data.length-1].month); // 현재 월을 화면에 표시
     }
   }, [data]);
 
